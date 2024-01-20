@@ -41,23 +41,22 @@ module.exports = {
       "error", 2, {
         ignoredNodes: [
           "JSXAttribute",
+          "PropertyDefinition",
         ],
       }],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     "quote-props": ["error", "as-needed"],
     semi: ["error", "never"],
-    "no-unused-vars": [
-      "error", {
-        argsIgnorePattern: "^_",
-      }],
+    "no-unused-vars": "off",
     "no-multi-spaces": [
       2, {
         exceptions: {
           ExportNamedDeclaration: true,
           ImportDeclaration: true,
         },
-      }],
+      },
+    ],
     "comma-dangle": ["error", "always-multiline"],
     "space-before-function-paren": [
       "error", {
@@ -71,6 +70,11 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": ["error"],
     "@typescript-eslint/no-explicit-any": ["error"],
     "@typescript-eslint/no-empty-function": ["error"],
+    "@typescript-eslint/no-unused-vars": [
+      "error", {
+        argsIgnorePattern: "^_",
+      },
+    ],
     "simple-import-sort/imports": ["error"],
     "simple-import-sort/exports": ["error"],
     "react/jsx-max-props-per-line": [
@@ -99,11 +103,6 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
-    "react-refresh/only-export-components": [
-      "warn", {
-        allowConstantExport: true,
-        allowExportNames: ["metadata"],
-      },
-    ],
+    "react-refresh/only-export-components": "off",
   },
 }
